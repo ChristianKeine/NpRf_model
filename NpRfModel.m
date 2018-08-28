@@ -5,7 +5,6 @@ function [Res]=NpRfModel(Data)
 % input arguments: EPSC amplitudes
 % output arguments: Struct containing values for f, N0, p and R;
 
-
 PPR = Data(2)/Data(1);
 
 ft=fittype('a*exp(-x/tau)+c');
@@ -27,6 +26,7 @@ oldoptions = optimoptions(@lsqnonlin,'Algorithm','trust-region-reflective',...
     'MaxFunctionEvaluations',5000,'StepTolerance',1e-9,...
     'FunctionTolerance',1e-9,'MaxIterations',1500,'Display','none');
 
+%set starting points of fit
 P0 = [30,0.1,0.02];
 PL = [0 0 0];
 PU = [Inf Inf Inf];
