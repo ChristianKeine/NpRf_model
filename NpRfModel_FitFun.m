@@ -1,7 +1,5 @@
 function [EPSC,N,Rep,f] = NpRfModel_FitFun(Data,f,P)
 
-
-
 N(1) = P(1);
 p = P(2);
 R = P(3);
@@ -17,7 +15,6 @@ for t=3:numel(Data)
     EPSC(t) = p*f*N(t);
     Rep(t) = N(t-1)*R*(p*f-1)+N(1)*R;
 end
-
 
 
 end
