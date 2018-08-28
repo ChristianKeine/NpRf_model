@@ -1,9 +1,14 @@
 function [Res]=NpRfModel(Data)
-% based on Thanawala MS, Regehr WG (2016) Determining Synaptic Parameters Using High-Frequency Activation. J Neurosci Methods 264:136–152.
-% fit to EPSC data with free variables: f, N0, p and R;
 % 
-% input arguments: EPSC amplitudes
-% output arguments: Struct containing values for f, N0, p and R;
+% calculates synaptic parameters by fitting synaptic currents from train stimulation to NpRf model. 
+% Estimates N (RRP size), p (initial release probability), R (replenishment), and f (synaptic facilitation).
+%
+% 
+% Input arguments: PSC amplitudes from train stimulation
+% output arguments: Struct containing values for f, N0, p, R and the EPSC fit function;
+%
+% when using this function, please cite "Thanawala MS, Regehr WG (2016)
+% Determining Synaptic Parameters Using High-Frequency Activation. J Neurosci Methods 264:136–152."
 
 PPR = Data(2)/Data(1);
 
