@@ -1,15 +1,15 @@
 function [Res]=NpRfModel(Data)
-% 
-% calculates synaptic parameters by fitting synaptic currents from train stimulation to NpRf model. 
+%
+% calculates synaptic parameters by fitting synaptic currents from train stimulation to NpRf model.
 % Estimates N (RRP size), p (initial release probability), R (replenishment), and f (synaptic facilitation).
 %
-% 
 % Input arguments: PSC amplitudes from train stimulation
 % output arguments: Struct containing values for f, N0, p, R and the EPSC fit function;
 %
 % when using this function, please cite "Thanawala MS, Regehr WG (2016)
 % Determining Synaptic Parameters Using High-Frequency Activation. J Neurosci Methods 264:136–152."
 
+Data = abs(Data);
 PPR = Data(2)/Data(1);
 
 ft=fittype('a*exp(-x/tau)+c');
@@ -56,7 +56,6 @@ EPSC = NpRfModel_FitFun(Data,f,P);
 
 EPSC_Diff = cumsum(EPSC(:))-cumsum(Data(:));
 % EPSC_Diff = EPSC(:)-Data(:);
-
 end
 
 function [EPSC,N,Rep,f] = NpRfModel_FitFun(Data,f,P)
