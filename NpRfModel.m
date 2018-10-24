@@ -6,8 +6,8 @@ function [Res]=NpRfModel(Data)
 % Input arguments: PSC amplitudes from train stimulation
 % output arguments: Struct containing values for f, N0, p, R and the EPSC fit function;
 %
-% when using this function, please cite "Thanawala MS, Regehr WG (2016)
-% Determining Synaptic Parameters Using High-Frequency Activation. J Neurosci Methods 264:136–152."
+% when using this function, please cite the following publication:
+% Thanawala MS, Regehr WG (2016): Determining Synaptic Parameters Using High-Frequency Activation. J Neurosci Methods 264:136–152.
 
 Data = abs(Data);
 PPR = Data(2)/Data(1);
