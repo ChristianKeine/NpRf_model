@@ -1,6 +1,6 @@
 # NpRf model to determine synaptic parameters
 
-- calculates synaptic parameters by fitting synaptic currents from train stimulation to NpRf model. Estimates N (RRP size), p (initial release probability), R (replenishment), and f (synaptic facilitation). This model was developed in [*"Thanawala MS, Regehr WG (2016) Determining Synaptic Parameters Using High-Frequency Activation. J Neurosci Methods 264:136–152."*](http://dx.doi.org/10.1016/j.jneumeth.2016.02.021)
+- calculates synaptic parameters by fitting synaptic currents from train stimulation to NpRf model. Estimates N (RRP size), p (initial release probability), R (replenishment), and f (synaptic facilitation). This model was developed and described in [*"Thanawala MS, Regehr WG (2016) Determining Synaptic Parameters Using High-Frequency Activation. J Neurosci Methods 264:136–152."*](http://dx.doi.org/10.1016/j.jneumeth.2016.02.021)
 
 ### How to use:
 
